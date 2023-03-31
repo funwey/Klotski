@@ -5,7 +5,10 @@ import GridLayout from "react-grid-layout";
 import gridBack from './static/gridBack.jpg'
 import sky from './static/sky.jpg'
 import HelpText from './components/HelpText'
+import SaveState from "./components/SaveState"
+import SaveScreen from "./components/SaveScreen"
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+
 
 const layout = [
   {i: "0", x: 0, y: 0, w: 1, h: 2, name: "父親"},
@@ -221,6 +224,8 @@ class App extends Component {
       <Grid container direction="column" justify="flex-start" alignItems="center" className={classes.wrapper} id="mainPanel">
         <h1 style={{margin: "15px 0 0 0", textShadow: "1px 1px 1px white"}}>Daughter in the box</h1>
         <Help className={classes.help} onClick={this.openHelp}/>
+        <SaveState></SaveState>
+        <SaveScreen></SaveScreen>
           <HelpText open={this.state.helpOpen} onClose={this.handleClose} />
         <h4 style={{margin: "5px 0"}}><i>-- a klotski game modified by Fun Wey --</i></h4>
         <Grid container justify="flex-start" className={classes.frame}>
