@@ -222,7 +222,7 @@ class App extends Component {
         <h1 style={{margin: "15px 0 0 0", textShadow: "1px 1px 1px white"}}>Daughter in the box</h1>
         <Help className={classes.help} onClick={this.openHelp}/>
           <HelpText open={this.state.helpOpen} onClose={this.handleClose} />
-        <h4 style={{margin: "5px 0"}}><i>-- a klotski game --</i></h4>
+        <h4 style={{margin: "5px 0"}}><i>-- a klotski game modified by Fun Wey --</i></h4>
         <Grid container justify="flex-start" className={classes.frame}>
           <GridLayout layout={this.state.layout} cols={4} rowHeight={70} width={280} margin={[2,2]} containerPadding = {[0,0]} isResizable={false} preventCollision={true} compactType={null} onLayoutChange={this.onLayoutChange} onDragStart={this.onDragStart} onDragStop={this.onDragStop} draggableHandle=".moving-grid">
             {layout.map((block, i) => {
